@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Tools</title>
+</head>
+<script>
+    async function getUserInfo(userId) {
+        const url = `https://discordlookup.mesalytic.moe/v1/user/${userId}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Unknown Error');
+        let text = await response.json();
+        console.log(text);
+        let avatarUrl = text.avatar.link;
+        let bannerLink = text.banner.link;
+        let globalName = text.global_name;
+        let id = text.id;
+        let username = "@" + text.username;
+        let timestamp = text.created_at;
+        
+
+        const dateObj = new Date(timestamp);
+        const datum = dateObj.toISOString().split('T')[0];
+        const uhrzeit = dateObj.toISOString().split('T')[1].split('Z')[0];
+        
+        
+        let date = datum;
+        let time = uhrzeit;
+        let dateTime = date + " " + time;
+
+        let bot = false;
+        if(text.raw.bot == true) {
+            bot = true
+            
+        }
+
+        let yesPic = "https://discordlookup.com/images/discord/icons/check.svg";
+        let noPic = "https://discordlookup.com/images/discord/icons/cross.svg"
+
+        document.getElementById('avatarPic').src=avatarUrl;
+        document.getElementById('bannerPic').src=bannerLink;
+        document.getElementById('username').textContent = username;
+        document.getElementById('globalName').textContent = globalName;
+        document.getElementById('id').textContent = id;
+        document.getElementById('dateTime').textContent = dateTime;
+        if(bot == true) {
+            document.getElementById('isBotPic').src = yesPic;
+        } else {
+            document.getElementById('isBotPic').src = noPic;
+        }
+        if(bannerLink == null) {
+            document.getElementById('bannerPic').style.display = 'none';
+        }
+        document.getElementById('bannerPic').src = bannerLink;
+        document.getElementById('profileView').style.display = 'block';
+    }
+</script>
+<body>
+    <h1><u>User Id Lookup</u></h1>
+    <textarea name="" id="userId" placeholder="user id" cols="40" rows="1"></textarea><br>
+    <br>
+    <input type="button" value="Get information" onclick="getUserInfo(document.getElementById('userId').value)"><br>
+    <br>
+    <br>
+    <div class="profileView" id="profileView">
+        <div id="avatar"><img src="" id="avatarPic" alt=""></div>
+        <div id="banner"><img src="" id="bannerPic" alt=""></div>
+        <div id="username"></div>
+        <div id="globalName"></div>
+        <div id="id"></div>
+        <div id="created">Created: </div>
+        <div id="dateTime"></div>
+        <div id="bot">Bot: </div>
+        <div id="isBot"><img src="https://discordlookup.com/images/discord/icons/cross.svg" alt="" id="isBotPic"></div>
+        
+    </div>
+    <br>
+    <br>
+    <a href="../discord-infoTools.html">Back</a>
+</body>
+</html>
+<style>
+    .profileView {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border: 1px solid white;
+        height: 250px;
+        width: 500px;
+        padding: 10px;
+        background-color: #333; 
+        color: white;
+        position: relative;
+        left: 590px;
+        display: none;
+    }
+    div#avatar {
+        color: rgb(31,31,31);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    div#banner {
+        color: rgb(31,31,31);
+        width: 170px;
+        height: 60px;
+        position: relative;
+        left: 330px;
+        bottom: 60px;
+
+    }
+    div#globalName {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        position: absolute;
+        left: 80px;
+        bottom: 245px;
+        font-weight: bold;
+    }
+    div#username {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        position: absolute;
+        left: 80px;
+        bottom: 220px;
+    }
+    div#id {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        position: absolute;
+        left: 80px;
+        bottom: 200px;
+        color: lightgrey;
+    }
+    div#created {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        position: absolute;
+        left: 13px;
+        bottom: 150px;
+        font-weight: bold;
+    }
+    div#dateTime {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        position: absolute;
+        left: 100px;
+        bottom: 150px;
+    }
+    div#bot {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        position: absolute;
+        left: 13px;
+        bottom: 110px;
+        font-weight: bold;
+    }
+    img#isBotPic {
+        width: 20px;
+        position: absolute;
+        left: 100px;
+        bottom: 108px;
+    }
+    img#avatarPic {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    img#bannerPic {
+        width: 240px;
+        height: 65px;
+        position: relative;
+        right: 70px;
+        
+    }
+    body {
+        background-color: rgb(31,31,31);
+        text-align: center;
+        font-size: 25px;
+        
+    }
+    h1 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    input {
+        background-color: magenta;
+        color: black;
+        height: 60px;
+        width: 250px;
+        border: 0;
+        border-radius: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input:hover {
+        background-color: darkmagenta;
+    }
+</style>
+
+<script>
+
+</script>
