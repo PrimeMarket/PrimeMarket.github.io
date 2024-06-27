@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Deleter</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="border-top">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Discord</button>
+                <div class="dropdown-menu">
+                    <a href="discord-grabberFile.html">Grabber</a>
+                    <a href="discord-ratFile.html">Rat</a>
+                    <a href="discord-tokenInfo.html">Token Info</a>
+                    <a href="discord-idInfo.html">ID Info</a>
+                    <a href="discord-webhookSender.html">Hook Sender</a>
+                    <a href="discord-webhookDeleter.html" style="font-weight: 1000;">Hook Deleter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Valorant</button>
+                <div class="dropdown-menu">
+                    <a href="valorant-triggerbotFile.html">Triggerbot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1><u>Webhook Deleter</u></h1>
+        <textarea name="" id="webhookUrl" placeholder="webhook url" cols="40" rows="5"></textarea>
+        <button class="btn" onclick="deleteWebhook(document.getElementById('webhookUrl').value)">Delete</button>
+    </div>
+</body>
+</html>
+<script>
+
+    function deleteWebhook(webhookURL) {
+        fetch(webhookURL, {
+          method: 'DELETE'
+        })
+        .then(response => {
+          if (response.ok) {
+            alert("Webhook deleted!")
+          } else {
+            alert("Error while deleting the webhook: ", response.statusText);
+          }
+        })
+        .catch(error => {
+            alert("Error while deleting the webhook: ", error);
+        });
+    }
+</script>

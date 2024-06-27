@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord ID Info</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="border-top">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Discord</button>
+                <div class="dropdown-menu">
+                    <a href="discord-grabberFile.html">Grabber</a>
+                    <a href="discord-ratFile.html">Rat</a>
+                    <a href="discord-tokenInfo.html">Token Info</a>
+                    <a href="discord-idInfo.html" style="font-weight: 1000;">ID Info</a>
+                    <a href="discord-webhookSender.html">Hook Sender</a>
+                    <a href="discord-webhookDeleter.html">Hook Deleter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Valorant</button>
+                <div class="dropdown-menu">
+                    <a href="valorant-triggerbotFile.html">Triggerbot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1><u>Discord User ID Information</u></h1>
+        <textarea name="" id="userId" placeholder="user id" rows="5" cols="40"></textarea>
+        <button type="button" class="btn" onclick="getUserInfo(document.getElementById('userId').value)">Get Information</button>
+        <table id="userIdInfo" border="1">
+            <tr>
+                <th colspan="2">User Information</th>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td id="username"></td>
+            </tr>
+            <tr>
+                <td>Global Name: </td>
+                <td id="globalName"></td>
+            </tr>
+            <tr>
+                <td>ID: </td>
+                <td id="id"></td>
+            </tr>
+            <tr>
+                <td>Created: </td>
+                <td id="createdAt"></td>
+            </tr>
+            <tr>
+                <td>Badges: </td>
+                <td id="badges"></td>
+            </tr>
+            <tr>
+                <td>Bot: </td>
+                <td><img id="isBotPic" src="" alt="" style="height: 30px; width: 30px;"></td>
+            </tr>
+            <tr>
+                <td>Avatar: </td>
+                <td><img id="avatar" src="" alt="" style="width: 100px;"></td>
+            </tr>
+            <tr>
+                <td>Banner: </td>
+                <td><img id="banner" src="" alt="" style="width: 240px;"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+
+
+    async function getUserInfo(userId) {
+        document.getElementById('userIdInfo').style.display = "none";
+
+        document.getElementById('username').textContent = 'N/A';
+        document.getElementById('globalName').textContent = 'N/A';
+        document.getElementById('id').textContent = 'N/A';
+        document.getElementById('createdAt').textContent = 'N/A';
+        document.getElementById('badges').textContent = '';
+        
+        const url = `https://discordlookup.mesalytic.moe/v1/user/${userId}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Unknown Error');
+        let text = await response.json();
+        console.log(text);
+        let badge = text.badges;
+        console.log(badge);
+        let bot = false;
+        if(text.raw.bot == true) {
+            bot = true
+        }
+;
+        if(bot == true) {
+            document.getElementById('isBotPic').src="https://discordlookup.com/images/discord/icons/check.svg";
+        } else {
+            document.getElementById('isBotPic').src="https://discordlookup.com/images/discord/icons/cross.svg"
+        }
+        let bannerLink = text.banner.link;
+        if(bannerLink == null) {
+            document.getElementById('banner').style.display = 'none';
+        }
+        let i = 0;
+        for(i in badge) {
+            console.log(text.badges[i]);
+            document.getElementById('badges').innerHTML += `<img src="img/${text.badges[i].toUpperCase()}.png" alt="" style="width: 30px; height: 30px;">`
+            i = i + 1;
+        }
+        
+
+        let avatarUrl = text.avatar.link;
+        
+        let globalName = text.global_name;
+        let id = text.id;
+        let username = "@" + text.username;
+        let timestamp = text.created_at;
+        
+
+        const dateObj = new Date(timestamp);
+        const datum = dateObj.toISOString().split('T')[0];
+        const uhrzeit = dateObj.toISOString().split('T')[1].split('Z')[0];
+        
+        
+        let date = datum;
+        let time = uhrzeit;
+        let dateTime = date + " " + time;
+
+        document.getElementById('username').innerHTML = username;
+        document.getElementById('globalName').innerHTML = globalName;
+        document.getElementById('id').innerHTML = userId;
+        document.getElementById('createdAt').innerHTML = dateTime;
+        document.getElementById('avatar').src = avatarUrl;
+        document.getElementById('banner').src = bannerLink;
+        document.getElementById('userIdInfo').style.display = "block";
+    }
+</script>

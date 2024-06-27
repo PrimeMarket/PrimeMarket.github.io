@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Triggerbot</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="border-top">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Discord</button>
+                <div class="dropdown-menu">
+                    <a href="discord-grabberFile.html">Grabber</a>
+                    <a href="discord-ratFile.html">Rat</a>
+                    <a href="discord-tokenInfo.html">Token Info</a>
+                    <a href="discord-idInfo.html">ID Info</a>
+                    <a href="discord-webhookSender.html">Hook Sender</a>
+                    <a href="discord-webhookDeleter.html">Hook Deleter</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Valorant</button>
+                <div class="dropdown-menu">
+                    <a href="valorant-triggerbotFile.html" style="font-weight: 1000;">Triggerbot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1><u>Valorant Triggerbot</u></h1>
+        <button type="button" class="btn" onclick="download()">Download triggerbot</button>
+        <a href="files/triggerbot.exe" download id="download"></a>
+    </div>
+    
+<script>
+    function download() {
+        document.getElementById('download').click();
+    }
+</script>
+</html>

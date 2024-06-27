@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(25, 25, 25);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.border-top {
+    background-color: rgb(40, 40, 40);
+    height: 60px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end; /* Positioniert die Buttons nach rechts */
+    align-items: center;
+    padding-right: 30px; /* Abstand zum rechten Rand */
+}
+
+.dropdown-container {
+    display: flex; /* Flexbox-Container */
+    gap: 30px; /* Abstand zwischen den Dropdown-Menüs */
+}
+
+.dropdown {
+    position: relative; /* Relativ positionieren, um absolute Positionierung der Menüs zu ermöglichen */
+}
+
+.dropdown-btn {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover + .dropdown-menu{
+    display: block;
+}
+.dropdown:hover .dropdown-menu {
+    display: block; /* Menü anzeigen, wenn Hover über Dropdown */
+}
+.dropdown:hover .dropdown-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    padding: 5px;
+    width: 100px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Menü anzeigen, wenn Hover über Dropdown */
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.container {
+    color: white;
+    display: flex;
+    flex-direction: column; /* Ändert die Richtung zu vertikal */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    position: fixed;
+    top: 70px; /* Abstand von oben */
+    width: 100%; /* Nimmt die gesamte Breite des Bildschirms ein */
+    font-size: 20px;
+    text-align: center; /* Text innerhalb des Containers zentrieren */
+    z-index: -1;
+}
+
+.btn {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(40, 40, 40, 1);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Abstand zwischen dem Text und dem Button */
+}
+
+.btn:hover {
+    background-color: rgba(60, 60, 60, 1);
+}
+table {
+    border-color: rgb(190,190,190);
+}
+table#userInfoTable {
+    position: fixed;
+    left: 1%;
+    top: 15%;
+    display: none;
+}
+table#billingInfoTable {
+    position: fixed;
+    right: 1%;
+    top: 15%;
+    display: none;
+    
+}
+.container table{
+    display: block;
+}
+table#userIdInfo {
+    position: fixed;
+    top: 40%;
+    display: none;
+}
+
