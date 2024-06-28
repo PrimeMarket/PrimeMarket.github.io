@@ -119,4 +119,15 @@ table#userIdInfo {
     top: 40%;
     display: none;
 }
-
+.border-bottom {
+    position: fixed;
+    bottom: 3%;
+}
+.border-bottom img{
+    width: 75px;
+    height: 75px;
+    
+}
+.border-bottom img:hover{
+    cursor: pointer;
+}
