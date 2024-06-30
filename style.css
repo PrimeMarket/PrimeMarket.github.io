@@ -17,6 +17,16 @@ body {
     padding-right: 30px; /* Abstand zum rechten Rand */
 }
 
+.border-top img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 1%;
+}
+.border-top img:hover {
+    cursor: pointer;
+}
+
 .dropdown-container {
     display: flex; /* Flexbox-Container */
     gap: 30px; /* Abstand zwischen den Dropdown-Menüs */
@@ -130,4 +140,20 @@ table#userIdInfo {
 }
 .border-bottom img:hover{
     cursor: pointer;
+}
+.paymentBox {
+    position: fixed;
+    left: 10%;
+    top: 22%;
+}
+
+.freeBox {
+    position: fixed;
+    top: 22%;
+}
+
+.offerBox {
+    position: fixed;
+    right: 10%;
+    top: 22%;
 }

