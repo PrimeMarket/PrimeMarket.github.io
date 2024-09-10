@@ -1,0 +1,159 @@
+/* Body Styling */
+
+header {
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+}
+
+body {
+    background-color: rgb(25, 25, 25);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+/* Top Bar Styling */
+.border-top {
+    background-color: rgb(40, 40, 40);
+    height: 7%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3%;
+}
+
+.border-top img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 1%;
+}
+
+.border-top img:hover {
+    cursor: pointer;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-container {
+    display: flex;
+    gap: 30px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover + .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    padding: 5px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+/* Bottom Bar Styling */
+.border-bottom {
+    position: fixed;
+    bottom: 3%;
+}
+
+.border-bottom img {
+    width: 75px;
+    height: 75px;
+}
+
+.border-bottom img:hover {
+    cursor: pointer;
+}
+
+
+.container {
+    display: flex;
+    flex-direction:row; /* Stellt sicher, dass die Kinder-Elemente untereinander angeordnet werden */
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center;    /* Zentriert vertikal */
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%; /* Vollständige Breite */
+}
+
+.container div .produkt {
+    background-color: white;
+    width: 120px;
+    height: 180px;
+    margin: 10px; /* Abstand zwischen den div-Elementen */
+    text-align: center;
+    flex-wrap: wrap; /* in die nächste zeile springen wenn kein platz*/
+    border: 1px solid black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container div .produkt:hover {
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4); /* Weniger Schatten */
+    transform: translateY(2px); /* Leichtes Drücken nach unten */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container div .produkt img {
+    width: 100px;
+    height: auto;
+    margin-top: 5%;
+}
+
+.container div:hover, a:hover, label:hover {
+    cursor: pointer;
+}

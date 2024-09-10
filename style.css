@@ -81,16 +81,17 @@ body {
 .container {
     color: white;
     display: flex;
-    flex-direction: column; /* Ändert die Richtung zu vertikal */
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    align-items: center; /* Zentriert den Inhalt vertikal */
-    position: fixed;
-    top: 70px; /* Abstand von oben */
-    width: 100%; /* Nimmt die gesamte Breite des Bildschirms ein */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ändere dies auf relative */
+    top: 70px;
+    width: 100%;
     font-size: 20px;
-    text-align: center; /* Text innerhalb des Containers zentrieren */
+    text-align: center;
     z-index: -1;
 }
+
 
 .btn {
     font-size: 20px;

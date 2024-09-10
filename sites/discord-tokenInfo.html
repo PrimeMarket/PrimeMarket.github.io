@@ -27,6 +27,12 @@
                     <a href="valorant-triggerbotFile.html">Triggerbot</a>
                 </div>
             </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Amazon</button>
+                <div class="dropdown-menu">
+                    <a href="amazon_finds.html">Amazon Finds</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
@@ -138,7 +144,7 @@
             'Authorization': token,
             'Content-Type': 'application/json'
         };
-    
+        
         try {
             const response = await fetch('https://discord.com/api/v6/users/@me', { headers: headers });
 
