@@ -15,6 +15,7 @@ body {
     justify-content: flex-end; /* Positioniert die Buttons nach rechts */
     align-items: center;
     padding-right: 30px; /* Abstand zum rechten Rand */
+    z-index: 1;
 }
 
 .border-top img {
@@ -89,7 +90,6 @@ body {
     width: 100%;
     font-size: 20px;
     text-align: center;
-    z-index: -1;
 }
 
 
