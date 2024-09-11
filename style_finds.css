@@ -12,7 +12,25 @@ body {
     margin: 0;
     flex-wrap: wrap;
 }
+.produkt {
+    position: relative; /* Ermöglicht es dem label, sich relativ zum Container zu positionieren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
 
+.produkt label {
+    position: absolute;
+    bottom: 2%;
+}
+
+.produkt img {
+    position: absolute;
+    top: 2%;
+}
 /* Top Bar Styling */
 .border-top {
     background-color: rgb(40, 40, 40);
