@@ -11,16 +11,10 @@
 <style>
 
 
-</style>
-
-
-
-
-
-</style>
 
 <header>
     <h1><u>Amazon Finds</u></h1>
+    <input type="text" id="searchBar" placeholder="Suche..." onkeyup="filterItems()">
 </header>
 <body>
     <div class="border-top">
@@ -203,3 +197,27 @@
     
 </body>
 </html>
+
+<script> 
+
+function filterItems() {
+    
+    let searchValue = document.getElementById("searchBar").value.toLowerCase();
+
+    let items = document.querySelectorAll(".finds");
+    
+
+    items.forEach(function(item) {
+
+        let label = item.querySelector("label").textContent.toLowerCase();
+
+        if (label.includes(searchValue)) {
+            item.style.display = ""; 
+        } else {
+            item.style.display = "none"; 
+        }
+    });
+}
+
+
+</script>
