@@ -146,6 +146,7 @@ body {
 .border-bottom {
     position: fixed;
     bottom: 3%;
+    margin-left: 13%;
 }
 
 .border-bottom img {
