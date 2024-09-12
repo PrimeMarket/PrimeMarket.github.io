@@ -1,5 +1,26 @@
 /* Body Styling */
 
+
+.produkt {
+    position: relative; /* Ermöglicht es dem label, sich relativ zum Container zu positionieren */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.produkt label {
+    position: absolute;
+    bottom: 2%;
+}
+
+.produkt img {
+    position: absolute;
+    top: 2%;
+}
+
 header {
     display: flex;
     text-align: center;
@@ -27,31 +48,15 @@ h1 {
     font-size: 16px;
 }
 
+
+
 body {
     background-color: rgb(25, 25, 25);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     flex-wrap: wrap;
 }
-.produkt {
-    position: relative; /* Ermöglicht es dem label, sich relativ zum Container zu positionieren */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-}
 
-.produkt label {
-    position: absolute;
-    bottom: 2%;
-}
-
-.produkt img {
-    position: absolute;
-    top: 2%;
-}
 /* Top Bar Styling */
 .border-top {
     background-color: rgb(40, 40, 40);
@@ -160,7 +165,7 @@ body {
     align-items: center;    /* Zentriert vertikal */
     text-align: center;
     flex-wrap: wrap;
-    width: 100%; /* Vollständige Breite */
+    width: 86%; /* Vollständige Breite */
 }
 
 .container div .produkt {
