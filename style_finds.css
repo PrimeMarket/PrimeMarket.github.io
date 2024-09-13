@@ -26,13 +26,17 @@ header {
     text-align: center;
     align-items: center;
     padding: 10px;
-    position: relative;
-    margin-top: 5%; 
-    margin-left: 13%; 
+    margin-top: 5%;  
     color: white;
     display: flex;
     justify-content: space-between
 }
+
+header input {
+    position: fixed;
+    right: 0;
+}
+
 
 
 
@@ -178,7 +182,7 @@ body {
 .container div .produkt {
     background-color: white;
     width: 120px;
-    height: 180px;
+    height: 200px;
     margin: 10px; /* Abstand zwischen den div-Elementen */
     text-align: center;
     flex-wrap: wrap; /* in die nächste zeile springen wenn kein platz*/
@@ -204,6 +208,7 @@ a {
     width: 100px;
     height: auto;
     margin-top: 5%;
+    
 }
 
 .container div:hover, a:hover, label:hover {
