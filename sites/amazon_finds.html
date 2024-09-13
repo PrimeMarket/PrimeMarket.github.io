@@ -9,7 +9,7 @@
 </head>
 <style>
     .categories {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         width: 13%;
         margin-top: 50%;
@@ -37,15 +37,11 @@
         cursor: pointer;
     }
 
-    .content {
-        display: none; 
-    }
-
     .electronics_content,
     .jewelry_content,
     .decoration_content,
     .usable_content {
-        display: flex;
+        display: contents;
         flex-wrap: wrap;
     }
     .border-bottom {
@@ -53,11 +49,15 @@
         bottom: 3%;
         margin-left: 13%;
     }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 </style>
 <body>
     <header>
         <h1><u>Amazon Finds</u></h1>
-        <input type="text" id="searchBar" placeholder="Suche..." onkeyup="filterItems()">
+        <input type="text" id="searchBar" placeholder="Suche..." onkeyup="filterItems()" >
     </header>
     <div class="border-top">
         <img src="../home.png" alt="" onclick="window.location.href='../index.html'">
@@ -103,12 +103,12 @@
     </div>
 
     <div class="container">
-        <div class="electronics_content content">
+        <div class="electronics_content">
             <div class="finds">
                 <a href="https://amzn.to/3AYDtyM" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/61yFReykZAL._AC_UY218_.jpg" alt="">
-                        <label for="">Wireless Powerbank</label>
+                        <label for="">Powerbank <br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -190,7 +190,7 @@
                 <a href="https://amzn.to/4gsv4UH" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/51VRu0zm1IL._AC_SY450_.jpg" alt="">
-                        <label for="">Logitech G Pro X Superlight 2</label>
+                        <label for="">Logitech G Pro X Superlight 2<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -200,12 +200,12 @@
             
         </div>
 
-        <div class="jewelry_content content">
+        <div class="jewelry_content">
             <div class="finds">
                 <a href="https://amzn.to/3XBSkrI" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/71dbsmoZgBL._AC_SX569_.jpg" alt="">
-                        <label for="">Silver Bracelet</label>
+                        <label for="">Bracelet<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -214,7 +214,7 @@
                 <a href="https://amzn.to/3XmtVoL" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/61wScTNUtxL._AC_UL320_.jpg" alt="">
-                        <label for="">Silver Necklace</label>
+                        <label for="">Necklace<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -250,7 +250,7 @@
                 <a href="https://amzn.to/4d5Jabw" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/613SxH-YMaL._AC_SX679_.jpg" alt="">
-                        <label for="">Cross Necklace</label>
+                        <label for="">Cross Necklace<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -259,7 +259,7 @@
                 <a href="https://amzn.to/4gkVebW" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/71A4YFwjd2L._AC_SX679_.jpg" alt="">
-                        <label for="">Silver Steel Bracelets</label>
+                        <label for="">Steel Bracelets<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -268,7 +268,7 @@
                 <a href="https://amzn.to/4edBXXY" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/61QKbMPVQXL._SY500_.jpg" alt="">
-                        <label for="">Gold Necklace</label>
+                        <label for="">Necklace<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -276,7 +276,7 @@
             
         </div>
 
-        <div class="decoration_content content">
+        <div class="decoration_content">
             <div class="finds">
                 <a href="https://amzn.to/3TrcJgF" target="_blank">
                     <div class="produkt">
@@ -299,7 +299,7 @@
                 <a href="https://amzn.to/3TpUV5F" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/71KmT0FkEdL._AC_UL320_.jpg" alt="">
-                        <label for="">Moving Sand Art</label>
+                        <label for="">Moving Sand Art<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -351,12 +351,12 @@
             
         </div>
 
-        <div class="usable_content content">
+        <div class="usable_content">
             <div class="finds">
                 <a href="https://amzn.to/47meMs6" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/61mJabVIQcL._AC_SX679_.jpg" alt="">
-                        <label for="">Air Tag Holder</label>
+                        <label for="">Air Tag Holder<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -384,7 +384,7 @@
                 <a href="https://amzn.to/4e21Hqy" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/41jEytz++aL._AC_.jpg" alt="">
-                        <label for="">Rainbow Knife</label>
+                        <label for="">Knife<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -393,7 +393,7 @@
                 <a href="https://amzn.to/4gi3BFb" target="_blank">
                     <div class="produkt">
                         <img src="https://m.media-amazon.com/images/I/51cH0Vj98KL._AC_SX679_.jpg" alt="">
-                        <label for="">Rainbow Karambit Knife</label>
+                        <label for="">Karambit Knife<br><u>More Options</u></label>
                     </div>
                 </a>
             </div>
@@ -439,7 +439,7 @@
                 categories.forEach(function(cat) {
                     const elements = document.getElementsByClassName(cat);
                     for (let i = 0; i < elements.length; i++) {
-                        elements[i].style.display = 'flex'; // Alle anzeigen
+                        elements[i].style.display = 'contents'; // Alle anzeigen
                     }
                 });
             } else {
