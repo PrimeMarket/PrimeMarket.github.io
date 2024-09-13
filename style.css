@@ -147,19 +147,29 @@ table#userIdInfo {
 .border-bottom img:hover{
     cursor: pointer;
 }
-.paymentBox {
+
+.discord {
     position: fixed;
+    flex-wrap: wrap;
     left: 10%;
     top: 22%;
 }
 
-.freeBox {
+.valorant {
     position: fixed;
+    flex-wrap: wrap;
     top: 22%;
 }
 
-.offerBox {
+.amazon {
     position: fixed;
+    flex-wrap: wrap;
     right: 10%;
     top: 22%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
 }
