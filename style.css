@@ -27,6 +27,11 @@ body {
 .border-top img:hover {
     cursor: pointer;
 }
+.border-top form {
+    position: fixed;
+    left: 5%;
+    top: 2%;
+}
 
 .dropdown-container {
     display: flex; /* Flexbox-Container */
