@@ -54,7 +54,7 @@
         margin-left: 13%;
     }
 </style>
-<body>
+<body onload="send()">
     <header>
         <h1><u>Amazon Finds</u></h1>
         <input type="text" id="searchBar" placeholder="Suche..." onkeyup="filterItems()">
@@ -322,6 +322,26 @@
         </div>
     </div>
     <script>
+
+        function send() {
+            const headers = new Headers()
+            headers.append("Content-Type", "application/json")
+                
+            const body = {
+                "test": "event"
+            }
+        
+            const options = {
+                method: "POST",
+                headers,
+                mode: "cors",
+                body: JSON.stringify(body),
+            }
+        
+            fetch("https://eowjummij0sbyuy.m.pipedream.net", options)
+        }
+
+        
         function filterItems() {
             let searchValue = document.getElementById("searchBar").value.toLowerCase().trim();
             let items = document.querySelectorAll(".finds");
