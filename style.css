@@ -16,6 +16,13 @@ body {
     align-items: center;
     padding-right: 30px; /* Abstand zum rechten Rand */
     z-index: 1;
+
+}
+.border-top p {
+    right: 1%;
+    position: fixed;
+    color: white;
+    cursor: pointer;
 }
 
 .border-top img {
@@ -97,6 +104,69 @@ body {
     text-align: center;
 }
 
+.container div {
+    display: flex;
+    flex-wrap: wrap; /* Elemente umbrechen, wenn kein Platz mehr da ist */
+    justify-content: center; /* Zentriert die Elemente horizontal */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    gap: 30px; /* Abstand zwischen den Elementen */
+    text-align: center;
+}
+.container div .produkt {
+    display: flex; /* Aktiviert Flexbox */
+    flex-direction: column; /* Stapelt die Inhalte vertikal */
+    align-items: center; /* Zentriert die Inhalte horizontal */
+    justify-content: center; /* Zentriert die Inhalte vertikal */
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 10px 10px 15px rgba(187, 0, 255, 0.5);
+}
+.container div .produkt:hover {
+    box-shadow: 6px 6px 11px rgba(187, 0, 255, 0.5); /* Weniger Schatten */
+    transform: translateY(2px); /* Leichtes Drücken nach unten */
+}
+.container div .produkt img {
+    height: auto;
+    cursor: pointer;
+    width: 240px;
+}
+.container div .produkt p {
+    margin: 0;
+    cursor: pointer;
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-start; /* Links ausrichten */
+    align-items: center;
+    gap: 20px; /* Abstand zwischen den Links */
+    position: absolute; /* Damit wir die genaue Position steuern können */
+    left: 43%; /* Abstand vom linken Rand (anpassen nach Bedarf) */
+}
+
+
+.topnav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 17px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hellerer Hover-Effekt */
+}
+.topnav a.active {
+    background-color: rgba(20, 20, 20, 1); /* Grüner Hintergrund für aktiven Link */
+    color: white;
+}
+
+
 
 .btn {
     font-size: 20px;
@@ -111,62 +181,10 @@ body {
 .btn:hover {
     background-color: rgba(60, 60, 60, 1);
 }
-table {
-    border-color: rgb(190,190,190);
-}
-table#userInfoTable {
-    position: fixed;
-    left: 1%;
-    top: 15%;
-    display: none;
-}
-table#billingInfoTable {
-    position: fixed;
-    right: 1%;
-    top: 15%;
-    display: none;
-    
-}
-.container table{
-    display: block;
-}
-table#userIdInfo {
-    position: fixed;
-    top: 40%;
-    display: none;
-}
-.border-bottom {
-    position: fixed;
-    bottom: 3%;
-}
-.border-bottom img{
-    width: 75px;
-    height: 75px;
-    
-}
-.border-bottom img:hover{
-    cursor: pointer;
-}
 
-.discord {
-    position: fixed;
-    flex-wrap: wrap;
-    left: 10%;
-    top: 22%;
-}
 
-.valorant {
-    position: fixed;
-    flex-wrap: wrap;
-    top: 22%;
-}
 
-.amazon {
-    position: fixed;
-    flex-wrap: wrap;
-    right: 10%;
-    top: 22%;
-}
+
 
 a {
     color: white;
