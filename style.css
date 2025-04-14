@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  header {
+    background: #1f1f1f;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    color: #ff00c8;
+    font-size: 1.8em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  
+  .section {
+    padding: 60px 40px;
+  }
+  
+  .section h2 {
+    font-size: 2em;
+    color: #ff00c8;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: #ff00c8;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .card li {
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  
+  footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    border-top: 1px solid #333;
+  }
+  
+  #btn_more_infos {
+    color: #ffffff;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  #btn_more_infos:hover {
+    background-color: #505050;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  #btn_more_infos:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .products {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  /* Modal Grundstruktur */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Modal Inhalt */
+  .modal-content {
+    background-color: #1e1e1e;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    color: #e0e0e0;
+  }
+  
+  .modal-content h2 {
+    color: #ff00c8;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .modal-content li {
+    margin-bottom: 8px;
+  }
+  
+  .close {
+    color: #ccc;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #fff;
+  }
+  
+  .video-container {
+    width: 100%;
+    max-width: 800px;  /* oder was für deine Seite gut passt */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .video-container img {
+    width: 100%;
+    height: 500px;              /* Bildhöhe wird automatisch angepasst */
+    object-fit: contain;       /* Bild wird vollständig gezeigt */
+    display: block;
+    border-radius: 10px;
+  }
+  
+  
+  
+  

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prime Market</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="primeMarketIco.ico">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Prime Market</h1>
+      <ul>
+        <li><a href="https://discord.gg/N55YYbDZ7Z" target="_blank">Discord</a></li>
+        <li><a href="https://www.youtube.com/@Official.Prime.Market" target="_blank">YouTube</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="free" class="section">
+      <h2>Free Products</h2>
+      <div class="products">
+        <div class="card">
+          <h3>PrimeAIM</h3>
+          <ul>
+            <li>✔️ AI Powered Aimbot</li>
+            <li>✔️ Userfriendly GUI</li>
+            <li>✔️ Only manual bans</li>
+          </ul>
+          <button onclick="openModal('primeaim')", id="btn_more_infos">More Infos</button>
+        </div>
+          
+          
+          
+        <div class="card">
+          <h3>PrimeTrigger</h3>
+          <ul>
+            <li>✔️ Valorant Triggerbot</li>
+            <li>✔️ Userfriendly GUI</li>
+            <li>✔️ Only manual bans</li>
+          </ul>
+          <button onclick="openModal('primetrigger')", id="btn_more_infos">More Infos</button>
+        </div>
+
+
+        <div class="card">
+          <h3>PrimeCrosshair</h3>
+          <ul>
+            <li>✔️ Very Simple Crosshair </li>
+            <li>✔️ Usable in every game</li>
+            <li>✔️ Userfriendly GUI</li>
+          </ul>
+          <button onclick="openModal('primecrosshair')", id="btn_more_infos">More Infos</button>
+        </div>
+
+        <div class="card">
+          <h3>PrimeCS2</h3>
+          <ul>
+            <li>✔️ External CS2 Cheat</li>
+            <li>✔️ Undetected</li>
+            <li>✔️ Userfriendly GUI</li>
+          </ul>
+          <button onclick="openModal('primecs2')", id="btn_more_infos">More Infos</button>
+        </div>
+
+        <div class="card">
+            <h3>PrimeCloner</h3>
+            <ul>
+              <li>✔️ Discord Server Cloner</li>
+              <li>✔️ Easy to use</li>
+              <li>‼️ Needs Discord User Token</li>
+            </ul>
+            <button onclick="openModal('primecloner')", id="btn_more_infos">More Infos</button>
+          </div>
+      </div>
+    </section>
+
+    <section id="paid" class="section">
+      <h2>Paid Products</h2>
+      <div class="products">
+        <div class="card">
+          <h3>PrimeAIM Pro</h3>
+          <ul>
+            <li>✔️ AI Powered Aimbot</li>
+            <li>✔️ Userfriendly GUI</li>
+            <li>✔️ Only manual bans</li>
+          </ul>
+          <button onclick="openModal('primeaimpro')", id="btn_more_infos">More Infos</button>
+        </div>
+
+        <div class="card">
+          <h3>PrimePrefire</h3>
+          <ul>
+            <li>✔️ Pixel Color Detection</li>
+            <li>✔️ Userfriendly GUI</li>
+            <li>✔️ Only manual bans</li>
+          </ul>
+          <button onclick="openModal('primeprefire')", id="btn_more_infos">More Infos</button>
+        </div>
+
+        <div class="card">
+          <h3>PrimeTrigger Pro</h3>
+          <ul>
+            <li>✔️ Very fast Triggerbot</li>
+            <li>✔️ Userfriendly GUI</li>
+            <li>✔️ Only manual bans</li>
+          </ul>
+          <button onclick="openModal('primetriggerpro')", id="btn_more_infos">More Infos</button>
+        </div>
+      </div>
+    </section>
+
+        <!-- Modal für PrimeAIM -->
+        <div id="modal-primeaim" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primeaim')">&times;</span>
+            <h2>PrimeAIM – Free AI Aimbot</h2>
+            <p>PrimeAIM is a simple, extern, AI powered aimbot</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>✔️ Works in every game that doesnt block mouse inputs</li>
+              <li>✔️ It works without reading or writing game memory and reduces the risk of detection by anti-cheat systems</li>
+              <li>✔️ NVIDIA GPUs are strongly recommended (Above RTX 2080)</li>
+            </ul>
+            <h3>Features:</h3>
+            <br>
+            <h5>AIM:</h5>
+            <ul>
+              <li>Head / Chest</li>
+              <li>Move Speed</li>
+              <li>AI Confidence</li>
+              <li>Custom Aimbot Hotkey</li>
+              <li>Enable / Disable Aimbot</li>
+            </ul>
+            <h5>FOV</h5>
+            <ul>
+              <li>Color</li>
+              <li>Size</li>
+              <li>Rainbow Color</li>
+              <li>Show / Hide</li>
+            </ul>
+            <h5>ESP</h5>
+            <ul>
+              <li>Color</li>
+              <li>Lines</li>
+              <li>Boxes</li>
+              <li>Confidence</li>
+              <li>Show / Hide</li>
+            </ul>
+            <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primeaim.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal für PrimeTrigger -->
+        <div id="modal-primetrigger" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primetrigger')">&times;</span>
+            <h2>PrimeTrigger – Free Valorant Triggerbot</h2>
+            <p>PrimeTrigger is a simple valorant triggerbot written in python</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>‼️ It does not work for everyone sadly because valorant blocks certain inputs for some people</li>
+              <li>✔️ It works without reading or writing game memory and reduces the risk of detection by anti-cheat systems</li>
+            </ul>
+            <h3>Features:</h3>
+            <ul>
+              <li>Custom Hotkey</li>
+              <li>Enable / Disable</li>
+              <li>Show / Hide FOV</li>
+              <li>Color Tolerance</li>
+              <li>Shoot Delay</li>
+              <li>FOV Size X</li>
+              <li>FOV Size Y</li>
+            </ul>
+            <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primetrigger.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal für PrimeCrosshair -->
+        <div id="modal-primecrosshair" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primecrosshair')">&times;</span>
+            <h2>PrimeCrosshair - Simple Crosshair Application</h2>
+            <p>PrimeCrosshair is a very simple crosshair application written in C#, it can be used in every game</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>✔️ Simple GUI, simple options, nothing special</li>
+            </ul>
+            <h3>Features:</h3>
+            <br>
+            <h5>Cross</h5>
+            <ul>
+              <li>Enable / Disable</li>
+              <li>Horizontal Length</li>
+              <li>Vertical Length</li>
+              <li>Line Thickness</li>
+              <li>Color</li>
+            </ul>
+            <h5>Circle</h5>
+            <ul>
+                <li>Enable / Disable</li>
+                <li>Radius</li>
+                <li>Circle Thickness</li>
+                <li>Color</li>
+            </ul>
+            <h5>Center Dot</h5>
+            <ul>
+                <li>Enable / Disable</li>
+                <li>Radius</li>
+                <li>Color</li>
+            </ul>
+            <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primecrosshair.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal für PrimeCS2 -->
+        <div id="modal-primecs2" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primecs2')">&times;</span>
+            <h2>PrimeCS2 – Free External CS2 Cheat</h2>
+            <p>PrimeCS2 is a free and external CS2 cheat written in C#, its currently undetected and easy to use</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>✔️ Fully External</li>
+              <li>✔️ CS2 must be open before running the cheat</li>
+            </ul>
+            <h3>Features:</h3>
+            <br>
+            <h5>AIM</h5>
+            <ul>
+              <li>Enable / Disable</li>
+              <li>Head / Neck / Waist</li>
+              <li>Enable / Disable teamcheck</li>
+              <li>Custom Hotkey</li>
+            </ul>
+            <h5>FOV</h5>
+            <ul>
+                <li>Show / Hide</li>
+                <li>Size</li>
+                <li>Color</li>
+            </ul>
+            <h5>ESP</h5>
+            <ul>
+                <li>Enable / Disable</li>
+                <li>Show / Hide: Bones / Lines / Boxes / Names / Healthbar</li>
+                <li>Team / Enemy / Bone - Color</li>
+            </ul>
+            <h5>PLAYER</h5>
+            <ul>
+                <li>Change FOV</li>
+            </ul>
+            <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primecs2.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal für PrimeAIM Pro -->
+        <div id="modal-primeaimpro" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('primeaimpro')">&times;</span>
+              <h2>PrimeAIM Pro – Paid AI Powered Aimbot</h2>
+              <p>PrimeAIM is a simple, extern, AI powered aimbot</p>
+              <br>
+              <h3>Information:</h3>
+              <ul>
+                <li>✔️ Works in every game that doesnt block mouse inputs</li>
+                <li>✔️ It works without reading or writing game memory and reduces the risk of detection by anti-cheat systems</li>
+                <li>✔️ NVIDIA GPUs are strongly recommended (Above RTX 2080)</li>
+                <li>✔️ More stable than the free version</li>
+                <li>✔️ Slightly better performance than the free version</li>
+              </ul>
+              <h3>Features:</h3>
+              <br>
+              <h5>AIM</h5>
+              <ul>
+                <li>Move Speed</li>
+                <li>AI Confidence</li>
+                <li>Aim Height (Head - Waist)</li>
+                <li>Custom Hotkey</li>
+                <li>Enable / Disable Aimbot</li>
+                <li>Enable / Disable Autoshoot</li>
+              </ul>
+              <h5>FOV</h5>
+              <ul>
+                  <li>Size</li>
+                  <li>Thickness</li>
+                  <li>Color</li>
+                  <li>Rainbow Color</li>
+                  <li>Show / Hid</li>
+              </ul>
+              <h5>ESP</h5>
+              <ul>
+                  <li>Color</li>
+                  <li>Line Start (Center, Center Top, Center Bottom)</li>
+                  <li>Line</li>
+                  <li>Box / Corner Box</li>
+                  <li>Confidence</li>
+                  <li>Show / Hide</li>
+              </ul>
+              <h5>CROSSHAIR</h5>
+              <ul>
+                  <li>Color</li>
+                  <li>Rainbow Color</li>
+                  <li>Horizontal Length</li>
+                  <li>Vertical Length</li>
+                  <li>Show / Hide</li>
+              </ul>
+              <h5>SETTINGS</h5>
+              <ul>
+                <li>Save Config</li>
+                <li>Load Config</li>
+                <li>Load Model</li>
+                <li>Second Hotkey</li>
+                <li>3D Player Protection (doesnt detect own character)</li>
+                <li>Show / Hide Detection Window</li>
+              </ul>
+              <h5>INFO</h5>
+              <ul>
+                <li>Key</li>
+                <li>Key Expire Date</li>
+                <li>User</li>
+                <li>UUID</li>
+                <li>Resolution</li>
+                <li>Capture Device</li>
+              </ul>
+              <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primeaimpro.png?raw=true" alt="">
+              </div>
+            </div>
+          </div>
+
+        <!-- Modal für PrimePrefire -->
+        <div id="modal-primeprefire" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primeprefire')">&times;</span>
+            <h2>PrimePrefire – Paid Fortnite Prefire</h2>
+            <p>PrimePrefire is written in python and uses pixel color detection to decide when to shoot and not to shoot</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>✔️ It works without reading or writing game memory and reduces the risk of detection by anti-cheat systems</li>
+              <li>✔️ Checks the Building Healthbar color</li>
+              <li>‼️ You need to set the rgb values for green and orange health bar yourself, but im working on a better alternative</li>
+            </ul>
+            <h3>Features:</h3>
+            <br>
+            <h5>PREFIRE</h5>
+            <ul>
+              <li>Hotkey</li>
+              <li>Enable / Disable</li>
+              <li>Enable / Disable AutoWall (auto places wall after shooting)</li>
+              <li>Change Green / Orange Building Health Color</li>
+            </ul>
+            <h5>USER</h5>
+            <ul>
+                <li>Wall Key</li>
+                <li>Place Building Key</li>
+                <li>Pump Slot Key</li>
+                <li>Fire Key</li>
+            </ul>
+            <h5>FOV</h5>
+            <ul>
+                <li>FOV X</li>
+                <li>FOV Y</li>
+                <li>Color</li>
+                <li>Rainbow Color</li>
+                <li>Show / Hid</li>
+            </ul>
+            <h5>SETTINGS</h5>
+            <ul>
+              <li>Save Config</li>
+              <li>Load Config</li>
+              <li>Show / Hide Detection Window</li>
+            </ul>
+            <h5>INFO</h5>
+            <ul>
+              <li>Key</li>
+              <li>Key Expire Date</li>
+              <li>User</li>
+              <li>UUID</li>
+              <li>Resolution</li>
+              <li>Capture Device</li>
+            </ul>
+            <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primeprefire.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal für PrimeTrigger Pro -->
+        <div id="modal-primetriggerpro" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('primetriggerpro')">&times;</span>
+              <h2>PrimeTrigger Pro – Paid Valorant Triggerbot</h2>
+              <p>PrimeTrigger Pro is a simple valorant triggerbot written in python</p>
+              <br>
+              <h3>Information:</h3>
+              <ul>
+                <li>‼️ It does not work for everyone sadly because valorant blocks certain inputs for some people</li>
+                <li>✔️ It works without reading or writing game memory and reduces the risk of detection by anti-cheat systems</li>
+                <li>✔️ More input methods will come in the future so it will work for everyone</li>
+              </ul>
+              <h3>Features:</h3>
+              <br>
+              <h5>TRIGGER</h5>
+              <ul>
+                <li>Enable / Disable</li>
+                <li>Toggle Hotkey</li>
+                <li>Hold Hotkey</li>
+                <li>Shoot Delay</li>
+              </ul>
+              <h5>FOV</h5>
+              <ul>
+                  <li>Show / Hide</li>
+                  <li>Color</li>
+                  <li>FOV X</li>
+                  <li>FOV Y</li>
+              </ul>
+              <h5>SETTINGS</h5>
+              <ul>
+                  <li>Ingame Fire Key</li>
+                  <li>Enable / Disable Move Protection (doesnt shoot while your moving if turned on)</li>
+                  <li>Save Config</li>
+                  <li>Load Config</li>
+                  <li>Ingame Enemy Color (Purple, Yellow, red)</li>
+                  <li>Color Tolerance</li>
+              </ul>
+              <div class="video-container">
+                <img src="https://github.com/PrimeMarket/pictures/blob/main/primetriggerpro.png?raw=true" alt="">
+              </div>
+            </div>
+          </div>
+
+        <!-- Modal für PrimeCloner -->
+        <div id="modal-primecloner" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('primecloner')">&times;</span>
+            <h2>PrimeCloner – Free Discord Server Cloner</h2>
+            <p>PrimeCloner is written in python and is used to clone discord servers</p>
+            <br>
+            <h3>Information:</h3>
+            <ul>
+              <li>✔️ Needs your Discord User Token to clone the server</li>
+              <li>✔️ You need to be on the discord server you want to clone</li>
+              <li>✔️ Enter server id you want to clone, enter server id you want to clone the server to (your own created server)</li>
+            </ul>
+            <div class="video-container">
+              <img src="https://github.com/PrimeMarket/pictures/blob/main/primecloner.png?raw=true" alt="">
+            </div>
+          </div>
+        </div>
+    </main>
+
+  <footer>
+    <p>© 2025 Prime Market. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<script>
+    function openModal(id) {
+      document.getElementById("modal-" + id).style.display = "block";
+    }
+  
+    function closeModal(id) {
+      document.getElementById("modal-" + id).style.display = "none";
+    }
+  
+    // Optional: Schließen bei Klick außerhalb
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+  
