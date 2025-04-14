@@ -132,7 +132,6 @@
   }
 
 
-  /* Modal Grundstruktur */
 .modal {
     display: none;
     position: fixed;
@@ -187,15 +186,15 @@
   
   .video-container {
     width: 100%;
-    max-width: 800px;  /* oder was für deine Seite gut passt */
+    max-width: 800px; 
     margin: 0 auto;
     overflow: hidden;
   }
   
   .video-container img {
     width: 100%;
-    height: 500px;              /* Bildhöhe wird automatisch angepasst */
-    object-fit: contain;       /* Bild wird vollständig gezeigt */
+    height: 500px;              
+    object-fit: contain;       
     display: block;
     border-radius: 10px;
   }
