@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Fixes</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .description {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <a href="../index.html" class="back-button">Back</a>
+        <h1>Bug Fixes</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search bug fixes...">
+        </div> 
+        <div class="bugfixes-container">
+            <div class="card bugfix">
+                <h2>Pip not found</h2>
+                <div class="description">
+                    <h3>
+                        1. Run the python installation file again<br>
+                        2. Click "Modify"<br>
+                        3. Make sure "pip" is checked<br>
+                        4. Click "Next"<br>
+                        5. Make sure "Add Python to environment variables" is checked<br>
+                        6. Click "Install"
+                    </h3>
+                </div>
+            </div>
+            <div class="card bugfix">
+                <h2>DLL load failed while importing pyarmor_runtime</h2>
+                <div class="description">
+                    <h3>
+                        1. Delete all the python versions that you have installed<br>
+                        2. Download the python version needed for the program (look at the program requirements)
+                    </h3>
+                </div>
+            </div>
+            <div class="card bugfix">
+                <h2>Python was not found</h2>
+                <div class="description">
+                    <h3>
+                        1. Run the python installation file again<br>
+                        2. Click "Modify"<br>
+                        3. Click "Next"<br>
+                        4. Make sure "Add Python to environment variables" is checked<br>
+                        5. Click "Install"<br>
+                        <hr>
+                        1. Search "Manage App Execution Aliases" in the windows search<br>
+                        2. Disable everything that has "python" in it
+                    </h3>
+                </div>
+            </div>
+            <div class="card bugfix">
+                <h2>AI Aimbot crashing when enabling</h2>
+                <div class="description">
+                    <h3>
+                        1. Update graphics card drivers<br>
+                        2. Download the required cuda toolkit version<br>
+                        3. Change the model from .engine to .pt
+                    </h3>
+                </div>
+            </div>
+            <div class="card bugfix">
+                <h2>Connection closed by remote host</h2>
+                <div class="description">
+                    <h3>
+                        1. Download a VPN (for example https://www.hotspotshield.com)
+                    </h3>
+                </div>
+            </div>
+            <div class="card bugfix">
+                <h2>No matching distribution found for torch==2.1.2</h2>
+                <div class="description">
+                    <h3>
+                        1. Delete all python versions you have installed<br>
+                        2. Download the python version needed for the program (look at the program requirements)
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" style="display: none;"></div>
+    <div id="popup" style="display: none;">
+        <div id="popup-content"></div>
+        <button id="close-popup">Close</button>
+    </div>
+    <div class="footer">Prime.exe | © 2025</div>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
